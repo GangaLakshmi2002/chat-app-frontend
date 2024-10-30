@@ -9,7 +9,9 @@ export default defineConfig({
     proxy: {
       "/api": {
         // target: "http://localhost:5000"
-        target: "https://chat-app-backend-tlvm.onrender.com"
+        target: "https://chat-app-backend-tlvm.onrender.com",
+        changeOrigin: true,
+        secure: false
       }
     }
   }
