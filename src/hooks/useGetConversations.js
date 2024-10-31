@@ -12,8 +12,9 @@ const useGetConversations = () => {
 				// const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/users`);
 				const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/users`, {
 					method: "GET",
-					headers: { "Content-Type": "application/json" },
 					credentials: 'include', 
+					headers: { "Content-Type": "application/json" },
+					
 				});
 				const data = await res.json();
 				console.log("users", data)
