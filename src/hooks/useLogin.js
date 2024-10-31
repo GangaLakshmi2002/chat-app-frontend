@@ -20,6 +20,7 @@ const useLogin = () => {
 			});
 
 			const data = await res.json();
+			localStorage.setItem('token', data.token);
 			if (data.error) {
 				throw new Error(data.error);
 			}
